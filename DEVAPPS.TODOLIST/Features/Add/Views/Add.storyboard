@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z2H-vx-pJu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add View Controller-->
+        <scene sceneID="0Fh-zi-mtU">
+            <objects>
+                <viewController id="z2H-vx-pJu" customClass="AddViewController" customModule="DEVAPPS_TODOLIST" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P81-ZD-swc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uzb-JC-c8C">
+                                <rect key="frame" x="0.0" y="5" width="8" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="home_color"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMi-2b-mgv" customClass="CircleButton" customModule="DEVAPPS_TODOLIST" customModuleProvider="target">
+                                <rect key="frame" x="16" y="60" width="40" height="40"/>
+                                <color key="backgroundColor" name="home_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pMi-2b-mgv" secondAttribute="height" multiplier="1:1" id="0g6-YX-YEZ"/>
+                                    <constraint firstAttribute="width" constant="40" id="4Nl-7B-gMV"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.left" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="KMx-ZY-m4G">
+                                <rect key="frame" x="16" y="140" width="382" height="524"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What`s up today?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPb-c7-2by">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="lfg-uo-xcU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PjG-cn-kSz">
+                                        <rect key="frame" x="0.0" y="71" width="382" height="216"/>
+                                    </pickerView>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="JP1-cz-ciP">
+                                        <rect key="frame" x="0.0" y="308" width="382" height="216"/>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZL8-er-aTY" customClass="CircleButton" customModule="DEVAPPS_TODOLIST" customModuleProvider="target">
+                                <rect key="frame" x="87" y="776" width="240" height="70"/>
+                                <color key="backgroundColor" name="home_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="JAl-gF-cFD"/>
+                                    <constraint firstAttribute="height" constant="70" id="dSX-S7-S1o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KMx-ZY-m4G" firstAttribute="leading" secondItem="pMi-2b-mgv" secondAttribute="leading" id="Man-h1-YLs"/>
+                            <constraint firstItem="uDX-hT-uWA" firstAttribute="trailing" secondItem="KMx-ZY-m4G" secondAttribute="trailing" constant="16" id="QPv-XM-rUM"/>
+                            <constraint firstItem="pMi-2b-mgv" firstAttribute="leading" secondItem="uDX-hT-uWA" secondAttribute="leading" constant="16" id="Wz6-HK-IBQ"/>
+                            <constraint firstItem="KMx-ZY-m4G" firstAttribute="top" secondItem="pMi-2b-mgv" secondAttribute="bottom" constant="40" id="eyB-VZ-hrQ"/>
+                            <constraint firstItem="uDX-hT-uWA" firstAttribute="bottom" secondItem="ZL8-er-aTY" secondAttribute="bottom" constant="16" id="fni-hu-Gje"/>
+                            <constraint firstItem="pMi-2b-mgv" firstAttribute="top" secondItem="uDX-hT-uWA" secondAttribute="top" constant="16" id="tAh-6h-URC"/>
+                            <constraint firstItem="ZL8-er-aTY" firstAttribute="centerX" secondItem="uDX-hT-uWA" secondAttribute="centerX" id="tqG-XS-lf0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uDX-hT-uWA"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="pMi-2b-mgv" id="zDn-rt-wqM"/>
+                        <outlet property="datePicker" destination="JP1-cz-ciP" id="EpZ-b9-xdl"/>
+                        <outlet property="saveButton" destination="ZL8-er-aTY" id="vtN-9q-VNQ"/>
+                        <outlet property="sideView" destination="Uzb-JC-c8C" id="UhS-0N-SAM"/>
+                        <outlet property="todoTextField" destination="wPb-c7-2by" id="GqS-QQ-cGo"/>
+                        <outlet property="typePicker" destination="PjG-cn-kSz" id="ML3-vo-XIn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mht-is-JLf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1.4492753623188408" y="135.9375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <namedColor name="home_color">
+            <color red="0.80000000000000004" green="0.90196078431372551" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
